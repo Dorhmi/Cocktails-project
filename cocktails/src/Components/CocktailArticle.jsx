@@ -16,7 +16,7 @@ export default function CocktailArticle ({
                 <h2 className="article-title">{strDrink}</h2>
                 <h4 className="article-glass">{strGlass}</h4>
                 <p className="article-type">{strAlcoholic}</p>
-                <Link to={`/cocktail/:${idDrink}`} className="btn-primary ">details</Link>
+                <Link to={`/cocktail/${idDrink}`} className="btn-primary ">details</Link>
             </div>
         </div>
     )
