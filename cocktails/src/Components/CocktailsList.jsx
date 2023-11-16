@@ -5,11 +5,15 @@ import CocktailArticle from "./CocktailArticle";
 
 export default function CocktailsList () {
     const {loading , items} = useGlobalContext();
-    console.log(items);
 
     if (loading) {
         return <Loading/>
     }
+
+    if (items.length === 0) {
+        return <h2 className="title">no cocktails matched your search criteria</h2>
+    }
+
     return (
         <section className="list-container">
             <h1 className="title">Cocktails</h1>
